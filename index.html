@@ -1,0 +1,44 @@
+<!-- HTML5 -->
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Set character encoding for the document -->
+	<meta charset = "utf-8">
+
+	<!-- Instruct Internet Explorer to use its latest rendering engine -->
+	<meta http-equiv = "x-ua-compatible" content = "ie=edge">
+
+	<!-- Viewport for responsive web design -->
+	<meta content = "width = device-width, initial-scale = 1, shrink-to-fit = no" name = "viewport">
+
+	<!-- Document Title -->
+	<title>Navigation bars</title>
+
+	<!-- Meta Description -->
+	<meta name = "description" content = "Diferent types of navigation bars using HTML, CSS and Javascript">
+
+	<link rel = "stylesheet" type = "text/css" href = "css/reset.css">
+	<link rel = "stylesheet" type = "text/css" href = "css/nav.css">
+</head>
+<body>
+	<div class = "container">
+		<ul class = "navigation" id = "nav">
+			<li><a  class ="active" href = "#">Home</a></li>
+			<li><a href = "#">Contact</a></li>
+			<li><a href = "#">About</a></li>
+			<li><a href = "#">Services</a></li>
+			<li><a class = "icon" onclick = "navbar();">&#9776;</a></li>
+		</ul>
+		<div class = "main">
+			<h1>Main Section</h1>
+			<p>This is main section of the page
+		</div>
+	</div>
+	<script>
+	function navbar(){
+		let navbar = document.getElementById("nav");
+		navbar.classList.toggle("responsive");
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+.navigation{
+	list-style: none;
+	width: 25%; height: 100%;
+	background: #ffa84c;
+	position: fixed;
+	overflow: auto;
+}
+
+.navigation li a{
+	display: block;
+	text-decoration: none;
+	padding: 10px 16px;
+	color: white;
+	text-align: left;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.active{
+	background: red;
+}
+
+.navigation li a:hover:not(.active) {
+	background: grey;
+}
+
+.navigation .icon{
+	display: none;
+}
+
+.main{
+	background: #5ca7f2;
+	margin-left: 25%;
+	text-align: center;
+	padding: 2%;
+	height: 100vh;
+}
+
+@media only screen and (max-width: 900px){
+
+	.navigation{
+		position: relative;
+		width: 100%;
+	}
+
+	.navigation li{
+		float: left;
+	}
+
+	.main{
+		margin-left: 0;
+	}
+}
+
+@media only screen and (max-width: 480px){
+
+	.navigation li{
+		float: none;
+		display: inline-block;
+	}
+
+	.navigation li:not(:first-child){
+		display: none;
+	}
+
+	.navigation li:last-child{
+		display: block;
+	}
+
+	.navigation .icon{
+		display: inline-block;
+		position: absolute;
+		top: 0; right: 0;
+	}
+
+	.responsive li{
+		display: block;
+	}
+
+	.responsive li:not(:first-child){
+		display: block;
+	}
+
+}
